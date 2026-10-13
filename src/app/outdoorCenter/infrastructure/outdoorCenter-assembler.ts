@@ -19,3 +19,9 @@ toEntityFromResource = (resource: OutdoorCenterResource): OutdoorCenter =>
     latitude: resource.latitude,
     longitude: resource.longitude,
   });
+
+toResourceFromEntity = (entity: OutdoorCenter): OutdoorCenterResource =>
+  ({
+    id: entity.id,
+    name: entity.name,
+  }) as OutdoorCenterResource;
