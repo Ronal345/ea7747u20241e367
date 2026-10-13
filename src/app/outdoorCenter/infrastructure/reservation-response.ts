@@ -3,7 +3,7 @@ import { OutdoorCenter } from '../domain/model/outdoorCenter';
 
 
 export interface ReservationResource extends BaseResponse {
-  id: string;
+  id: number;
   outdoorCenterId: OutdoorCenter;
   activityType: string;
   participantName: string;
