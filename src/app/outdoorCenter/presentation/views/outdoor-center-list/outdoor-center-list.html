@@ -1,1 +1,21 @@
-<p>outdoor-center-list works!</p>
+
+
+
+  <div class="outdoorCenter">
+    @for (article of facade.articles(); track article.url) {
+      <article class="card">
+        <div class="content">
+          <p class="source">{{ article.source }}</p>
+          <h2>{{ article.title }}</h2>
+          <p>{{ article.description }}</p>
+
+          <small>
+            {{ article.publishedAt | date:'dd/MM/yyyy HH:mm' }}
+            @if (article.author) { · {{ article.author }} }
+          </small>
+
+          <a [href]="article.url" target="_blank" rel="noopener noreferrer">Leer noticia</a>
+        </div>
+      </article>
+    }
+  </div>
